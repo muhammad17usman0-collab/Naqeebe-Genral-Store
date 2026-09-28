@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sardar Mohsin Mart | Groceries, Clothes & Shoes</title>
+<meta name="description" content="Shop groceries, clothes and shoes at Sardar Mohsin Mart. Discover everyday essentials, stylish clothing and quality footwear in one convenient online store.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- HEADER -->
+<header class="hdr" id="top">
+  <a class="logo" href="#home" aria-label="Sardar Mohsin Mart home"><span class="mark">SM</span><span class="lt">Sardar Mohsin <b>Mart</b></span></a>
+  <nav id="nav" aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#shop" data-cat="Groceries">Groceries</a>
+    <a href="#shop" data-cat="Clothes">Clothes</a>
+    <a href="#shop" data-cat="Shoes">Shoes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="acts">
+    <label class="srch"><span class="sr">Search products</span><input id="search" type="search" placeholder="Search rice, shirt, sneakers…" autocomplete="off"></label>
+    <button id="cartBtn" class="ib" aria-label="Open shopping cart">🛒<span id="cartCount" class="cnt">0</span></button>
+    <button id="burger" class="ib" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="home">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-in">
+      <p class="eyebrow">Groceries • Clothes • Shoes — Everything You Need in One Place</p>
+      <h1>Everything You Need, All in One Place.</h1>
+      <p class="sub">Shop groceries, fashionable clothes and quality shoes at Sardar Mohsin Mart.</p>
+      <a class="btn gold" href="#shop">Shop Now</a>
+      <ul class="stats"><li><b>24+</b>Products</li><li><b>3</b>Categories</li><li><b>Rs. 5,000+</b>Free delivery</li></ul>
+    </div>
+    <div class="float" aria-hidden="true"><span>🛒</span><span>👕</span><span>👟</span><span>🍚</span></div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="wrap sec">
+    <h2 class="rv">Shop by Category</h2>
+    <div class="cats">
+      <article class="ccard rv"><div class="ce">🛒</div><h3>Groceries</h3><p>Fresh essentials for your everyday needs.</p><a class="btn" href="#shop" data-cat="Groceries">Shop Groceries</a></article>
+      <article class="ccard rv"><div class="ce">👕</div><h3>Clothes</h3><p>Comfortable and stylish clothing for everyone.</p><a class="btn" href="#shop" data-cat="Clothes">Shop Clothes</a></article>
+      <article class="ccard rv"><div class="ce">👟</div><h3>Shoes</h3><p>Step into comfort and style.</p><a class="btn" href="#shop" data-cat="Shoes">Shop Shoes</a></article>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="wrap sec" id="shop">
+    <h2 class="rv">Popular Products</h2>
+    <div class="bar">
+      <div class="chips" role="group" aria-label="Filter by category">
+        <button class="chip on" data-cat="All">All</button><button class="chip" data-cat="Groceries">Groceries</button><button class="chip" data-cat="Clothes">Clothes</button><button class="chip" data-cat="Shoes">Shoes</button>
+      </div>
+      <label class="sort">Sort by
+        <select id="sort"><option value="popular">Popular</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="newest">Newest</option></select>
+      </label>
+    </div>
+    <p id="count" class="mut" aria-live="polite"></p>
+    <div id="grid" class="grid"></div>
+    <p id="none" class="none" hidden>No products found</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="wrap sec" id="contact">
+    <div class="contact rv">
+      <div><h2>Visit Sardar Mohsin Mart</h2><p class="mut">Groceries, clothes and shoes — all under one roof.</p></div>
+      <ul class="info">
+        <li>🏪 <span><b>Sardar Mohsin Mart</b></span></li>
+        <li>📞 <span>+92 XXX XXXXXXX</span></li>
+        <li>📍 <span>Your Shop Address</span></li>
+        <li>🕘 <span>9:00 AM – 10:00 PM</span></li>
+      </ul>
+      <button class="btn gold" data-soon="Contact details will be added soon">Contact Us</button>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap fgrid">
+    <div><a class="logo" href="#home"><span class="mark">SM</span><span class="lt">Sardar Mohsin <b>Mart</b></span></a><p>Your everyday shopping destination.</p>
+      <div class="soc"><button data-soon="Facebook page coming soon" aria-label="Facebook">f</button><button data-soon="Instagram page coming soon" aria-label="Instagram">◎</button><button data-soon="WhatsApp coming soon" aria-label="WhatsApp">✆</button></div></div>
+    <nav aria-label="Footer"><a href="#home">Home</a><a href="#shop" data-cat="Groceries">Groceries</a><a href="#shop" data-cat="Clothes">Clothes</a><a href="#shop" data-cat="Shoes">Shoes</a><a href="#contact">Contact</a><button data-soon="Privacy Policy coming soon">Privacy Policy</button><button data-soon="Terms & Conditions coming soon">Terms &amp; Conditions</button></nav>
+  </div>
+  <p class="copy">© 2026 Sardar Mohsin Mart. All rights reserved.</p>
+</footer>
+
+<!-- OVERLAY + LAYERS -->
+<div id="ov" class="ov"></div>
+
+<aside id="cart" class="layer drawer" role="dialog" aria-label="Shopping cart" aria-hidden="true">
+  <div class="lh"><h2>Your Cart</h2><button class="x" data-act="close" aria-label="Close cart">✕</button></div>
+  <ul id="cartItems" class="items"></ul>
+  <div class="tot">
+    <p id="ship" class="ship"></p>
+    <div><span>Subtotal</span><b id="sub"></b></div>
+    <div><span>Delivery</span><b id="fee"></b></div>
+    <div class="gt"><span>Total</span><b id="tot"></b></div>
+    <button id="checkoutBtn" class="btn gold full" data-act="checkout">Proceed to Checkout</button>
+  </div>
+</aside>
+
+<div id="pm" class="layer modal" role="dialog" aria-label="Product details" aria-hidden="true">
+  <button class="x" data-act="close" aria-label="Close details">✕</button>
+  <div id="pmBody"></div>
+</div>
+
+<div id="co" class="layer modal" role="dialog" aria-label="Checkout" aria-hidden="true">
+  <button class="x" data-act="close" aria-label="Close checkout">✕</button>
+  <div id="coBody">
+    <h2>Checkout</h2>
+    <p id="coSum" class="mut"></p>
+    <form id="coForm" novalidate>
+      <label>Full Name<input name="name" autocomplete="name"><small data-err="name"></small></label>
+      <label>Phone Number<input name="phone" type="tel" autocomplete="tel" placeholder="03XX XXXXXXX"><small data-err="phone"></small></label>
+      <label>Address<input name="address" autocomplete="street-address"><small data-err="address"></small></label>
+      <label>City<input name="city" autocomplete="address-level2"><small data-err="city"></small></label>
+      <label>Delivery Instructions (optional)<textarea name="notes" rows="2"></textarea></label>
+      <fieldset><legend>Payment</legend>
+        <label class="rad"><input type="radio" name="pay" value="cod" checked> Cash on Delivery</label>
+        <label class="rad"><input type="radio" name="pay" value="online"> Online Payment (coming soon)</label>
+      </fieldset>
+      <button class="btn gold full" type="submit">Place Order</button>
+    </form>
+  </div>
+  <div id="ok" class="ok" hidden>
+    <div class="tick">✓</div><h2>Order Placed Successfully!</h2>
+    <p>Order number</p><p class="ono" id="orderNo"></p><p class="mut">Total payable: <b id="okTotal"></b></p>
+    <button class="btn full" data-act="close">Continue Shopping</button>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
